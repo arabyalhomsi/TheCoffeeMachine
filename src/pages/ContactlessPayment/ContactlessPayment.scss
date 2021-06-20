@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+
+.ContactlessPayment {
+	&__title {
+		@include page-title;
+	}
+	&__coffeemachine {
+		position: absolute;
+		left: 0px;
+		top: 150px;
+		width: 100%;
+	}
+	&__note {
+		position: absolute;
+		top: 580px;
+		text-decoration: underline;
+		color: #000;
+		font-size: 16px;
+		font-weight: 500;
+	}
+}

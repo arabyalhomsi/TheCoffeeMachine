@@ -9,7 +9,7 @@ function SVGIcon(props) {
 		console.log(e);
 	}
 
-	return <img src={icon.default} />;
+	return <img className={props.className} src={icon.default} />;
 }
 
 export default SVGIcon;
