@@ -1,5 +1,7 @@
-import endpoint from "./endpoint";
+import API from "./API";
 
-export function getCoffeeMachine() {
-	fetch(endpoint() + "coffee-machine/");
+export async function getCoffeeMachine(id) {
+	const api = new API();
+
+	return api.fetch(`coffee-machine/${id}`);
 }

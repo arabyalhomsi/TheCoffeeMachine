@@ -1,9 +1,13 @@
-class API {
+export default class API {
 	constructor() {
-		this.baseURL = process.env.BASE_URL;
+		if (API._instance) {
+			return API._instance;
+		}
+		this.baseURL = process.env.REACT_APP_BASE_URL;
+		API._instance = this;
 	}
 
-	fetch(endpoint, options) {
+	async fetch(endpoint, options) {
 		return fetch(this.baseURL + endpoint, options);
 	}
 }
