@@ -1,7 +1,7 @@
 import API from "./API";
 
-export async function getCoffeeMachine(id) {
-	const api = new API();
+const api = new API("coffee-machine");
 
-	return api.fetch(`coffee-machine/${id}`);
+export async function getCoffeeMachine(id) {
+	return api.fetch(id);
 }
