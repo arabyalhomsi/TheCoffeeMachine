@@ -13,17 +13,20 @@ function SelectExtras() {
 		React.useContext(AppContext);
 
 	const [selectedChoices, setSelectedChoices] = useState({});
+	const [dropdownState, setDropdownState] = useState("");
 
 	let history = useHistory();
 
 	function handleSelection(selection, identifier) {
-		let v = {
+		setSelectedChoices({
 			...selectedChoices,
 			[identifier]: selection
-		};
-		console.log(v);
-		setSelectedChoices(v);
-		// setUserOrder();
+		});
+	}
+
+	function handleClick(_id) {
+		setDropdownState(_id);
+		console.log(_id);
 	}
 
 	return (
@@ -47,7 +50,10 @@ function SelectExtras() {
 										}
 									/>
 								}
-								dropdown={true}
+								onClick={() => handleClick(extra._id)}
+								dropdown={
+									dropdownState == extra._id ? true : false
+								}
 								dropdownSelections={extra.subselections}
 								dropownOnClick={handleSelection}
 								selectedChoices={selectedChoices[extra._id]}
