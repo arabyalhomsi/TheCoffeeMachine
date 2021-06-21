@@ -4,7 +4,7 @@ import Menu from "../../components/Menu/Menu";
 import MenuOption from "../../components/MenuOption/MenuOption";
 import AppContext from "../../contexts/AppContext";
 import SVGIcon from "../../components/SVGIcon/SVGIcon";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./SelectStyle.scss";
@@ -17,7 +17,7 @@ function SelectStyle() {
 
 	const handleClick = (type) => {
 		setUserOrder({ type });
-		history.push("/select-size");
+		history.push("/contactless-payment");
 	};
 
 	return (
@@ -40,9 +40,6 @@ function SelectStyle() {
 									icon={<SVGIcon name={type.name} />}
 								/>
 							))}
-							<Link to="/contactless-payment">
-								ContactLess payment
-							</Link>
 						</div>
 					</CSSTransition>
 				</TransitionGroup>
