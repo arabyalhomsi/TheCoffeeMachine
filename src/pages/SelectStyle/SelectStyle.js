@@ -1,16 +1,24 @@
 import React, { useRef } from "react";
+
 import Menu from "../../components/Menu/Menu";
 import MenuOption from "../../components/MenuOption/MenuOption";
 import AppContext from "../../contexts/AppContext";
 import SVGIcon from "../../components/SVGIcon/SVGIcon";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./SelectStyle.scss";
 
 function SelectStyle() {
-	const { machineData } = React.useContext(AppContext);
 	const nodeRef = useRef(null);
+	const { machineData, setUserOrder } = React.useContext(AppContext);
+
+	let history = useHistory();
+
+	const handleClick = (type) => {
+		setUserOrder({ type });
+		history.push("/select-size");
+	};
 
 	return (
 		<div className="SelectStyle">
@@ -26,6 +34,7 @@ function SelectStyle() {
 						<div ref={nodeRef}>
 							{machineData.types?.map((type, key) => (
 								<MenuOption
+									onClick={() => handleClick(type)}
 									key={key}
 									title={type.name}
 									icon={<SVGIcon name={type.name} />}

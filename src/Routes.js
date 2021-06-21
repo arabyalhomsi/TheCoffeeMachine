@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SelectStyle from "./pages/SelectStyle/SelectStyle";
 import ContactlessPayment from "./pages/ContactlessPayment/ContactlessPayment";
+import SelectSize from "./pages/SelectSize/SelectSize";
+import SelectExtras from "./pages/SelectExtras/SelectExtras";
 
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
@@ -13,6 +15,12 @@ function RoutesWrapper() {
 			<Switch>
 				<Route path="*">
 					<AnimationApp />
+				</Route>
+				<Route exact path="/select-size">
+					<SelectSize />
+				</Route>
+				<Route exact path="/select-extras">
+					<SelectExtras />
 				</Route>
 			</Switch>
 		</Router>
