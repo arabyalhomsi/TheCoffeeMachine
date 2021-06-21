@@ -15,6 +15,7 @@
 
 3. In the terminal, run `./build.bash`
 4. Then, run `./run.bash`
+5. Go to `localhost:3000`
 
 ### Using Yarn
 
@@ -25,6 +26,7 @@
 
 3. In the terminal, run `yarn`
 4. Then, run `yarn start`
+5. Go to `localhost:3000`
 
 ## App Folder Structure
 
