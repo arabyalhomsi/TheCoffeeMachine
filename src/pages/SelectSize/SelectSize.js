@@ -14,6 +14,10 @@ function SelectSize() {
 
 	let history = useHistory();
 
+	if (Object.keys(machineData).length == 0) {
+		history.push("/select-style");
+	}
+
 	const handleClick = (size) => {
 		setUserOrder({ ...userOrder, size: size });
 		history.push("/select-extras");

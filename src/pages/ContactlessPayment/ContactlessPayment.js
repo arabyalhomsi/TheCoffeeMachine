@@ -3,12 +3,20 @@ import { useHistory } from "react-router-dom";
 
 import SVGIcon from "../../components/SVGIcon/SVGIcon";
 import ToolTip from "../../components/ToolTip/ToolTip";
+import AppContext from "../../contexts/AppContext";
 
 import "./ContactlessPayment.scss";
 
 function ContactlessPayment() {
+	const { machineData, userOrder, setUserOrder } =
+		React.useContext(AppContext);
+
 	const [counter, setCounter] = useState(5);
 	let history = useHistory();
+
+	if (Object.keys(machineData).length == 0) {
+		history.push("/select-style");
+	}
 
 	useEffect(() => {
 		const timer = setInterval(() => {

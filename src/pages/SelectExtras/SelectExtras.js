@@ -17,6 +17,10 @@ function SelectExtras() {
 
 	let history = useHistory();
 
+	if (Object.keys(machineData).length == 0) {
+		history.push("/select-style");
+	}
+
 	function handleSelection(selection, identifier) {
 		setSelectedChoices({
 			...selectedChoices,
