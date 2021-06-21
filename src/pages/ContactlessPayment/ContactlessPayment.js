@@ -19,7 +19,6 @@ function ContactlessPayment() {
 				text="How does this work?"
 				onHover="This machine works by reading your credit card code and charging the payment directly from your bank account"
 			/>
-			<Link to="/select-style">Select style</Link>
 		</div>
 	);
 }
