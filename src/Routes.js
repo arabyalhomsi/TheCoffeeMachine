@@ -16,12 +16,6 @@ function RoutesWrapper() {
 				<Route path="*">
 					<AnimationApp />
 				</Route>
-				<Route exact path="/select-size">
-					<SelectSize />
-				</Route>
-				<Route exact path="/select-extras">
-					<SelectExtras />
-				</Route>
 			</Switch>
 		</Router>
 	);
@@ -52,6 +46,12 @@ function AnimationApp() {
 						</Route>
 						<Route exact path="/contactless-payment">
 							<ContactlessPayment />
+						</Route>
+						<Route exact path="/select-size">
+							<SelectSize />
+						</Route>
+						<Route exact path="/select-extras">
+							<SelectExtras />
 						</Route>
 					</Switch>
 				</div>

@@ -35,7 +35,7 @@ function MenuOption(props) {
 									<span className="MenuOption__elementCheck">
 										<SVGIcon
 											name={
-												props.selectedChoices._id ==
+												props.selectedChoices?._id ==
 												selection._id
 													? "fullcheck"
 													: "emptycheck"
