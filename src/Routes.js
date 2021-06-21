@@ -7,7 +7,7 @@ import SelectExtras from "./pages/SelectExtras/SelectExtras";
 
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
-import "./styles/animations.css";
+import "./styles/animations.scss";
 
 function RoutesWrapper() {
 	return (

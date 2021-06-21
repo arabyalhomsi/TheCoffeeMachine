@@ -1,3 +1,6 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
 .fade-enter {
 	opacity: 0;
 	transform: translate(200px, 0);
@@ -15,7 +18,7 @@
 	transform: translate(0, 0);
 }
 .fade-enter-active {
-	transition: 300ms ease-in-out;
+	transition: $transition-standard ease-in-out;
 }
 
 .App__transition {
