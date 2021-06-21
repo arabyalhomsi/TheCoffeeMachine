@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import Menu from "../../components/Menu/Menu";
 import MenuOption from "../../components/MenuOption/MenuOption";
 import AppContext from "../../contexts/AppContext";
@@ -10,8 +12,10 @@ function SelectSize() {
 	const { machineData, userOrder, setUserOrder } =
 		React.useContext(AppContext);
 
+	let history = useHistory();
+
 	const handleClick = (size) => {
-		setUserOrder(...userOrder, { size: size });
+		setUserOrder({ ...userOrder, size: size });
 		history.push("/select-extras");
 	};
 
