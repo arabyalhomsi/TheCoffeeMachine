@@ -9,9 +9,13 @@ function App() {
 	const [machineData, setMachineData] = useState({});
 	const [userOrder, setUserOrder] = useState({
 		type: {
-			sizes: []
+			sizes: [],
+			name: ""
 		},
-		size: {}
+		size: {
+			name: ""
+		},
+		extras: {}
 	});
 
 	useEffect(() => {

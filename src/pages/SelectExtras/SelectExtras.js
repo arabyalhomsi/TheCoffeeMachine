@@ -32,6 +32,15 @@ function SelectExtras() {
 		setDropdownState(_id);
 	}
 
+	function confirmOrder() {
+		setUserOrder({
+			...userOrder,
+			extras: selectedChoices
+		});
+
+		history.push("/order-processed");
+	}
+
 	return (
 		<div className="SelectExtras">
 			<h2 className="SelectExtras__title">Select your extra's</h2>
@@ -64,6 +73,11 @@ function SelectExtras() {
 						);
 					}
 				})}
+				<MenuOption
+					title="Confirm order"
+					className="no-icon"
+					onClick={confirmOrder}
+				/>
 			</Menu>
 		</div>
 	);

@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+
+.OrderProcessed {
+	&__title {
+		@include page-title;
+	}
+	&__coffee {
+		margin-top: 30px;
+		width: 50%;
+	}
+}

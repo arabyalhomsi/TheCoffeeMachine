@@ -45,7 +45,11 @@
 		align-items: center;
 		justify-content: flex-end;
 	}
-
+	&.no-icon {
+		.MenuOption__top {
+			justify-content: center;
+		}
+	}
 	&__dropdown {
 		display: flex;
 		flex-direction: column;
