@@ -1,5 +1,10 @@
 import React, { useRef } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect
+} from "react-router-dom";
 import SelectStyle from "./pages/SelectStyle/SelectStyle";
 import ContactlessPayment from "./pages/ContactlessPayment/ContactlessPayment";
 import SelectSize from "./pages/SelectSize/SelectSize";
@@ -53,6 +58,7 @@ function AnimationApp() {
 						<Route exact path="/select-extras">
 							<SelectExtras />
 						</Route>
+						<Redirect exact from="/" to="/select-style" />
 					</Switch>
 				</div>
 			</CSSTransition>
