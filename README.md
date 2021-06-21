@@ -6,6 +6,8 @@
 
 ## Installation and Running
 
+### Using Docker
+
 1. Clone the repository  
    `git clone git@github.com:arabyalhomsi/TheCoffeeMachine.git`
 
@@ -13,6 +15,16 @@
 
 3. In the terminal, run `./build.bash`
 4. Then, run `./run.bash`
+
+### Using Yarn
+
+1. Clone the repository  
+   `git clone git@github.com:arabyalhomsi/TheCoffeeMachine.git`
+
+2. Make sure you NodeJS and Yarn
+
+3. In the terminal, run `yarn`
+4. Then, run `yarn start`
 
 ## App Folder Structure
 
