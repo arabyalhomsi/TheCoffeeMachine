@@ -14,8 +14,6 @@ function App() {
 		size: {}
 	});
 
-	console.log("Machine data:", machineData);
-
 	useEffect(() => {
 		getCoffeeMachine(process.env.REACT_APP_MACHINE_ID)
 			.then((res) => res.json())

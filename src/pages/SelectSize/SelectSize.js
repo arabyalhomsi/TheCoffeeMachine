@@ -24,7 +24,6 @@ function SelectSize() {
 			<h2 className="SelectSize__title">Select your size</h2>
 			<Menu>
 				{machineData.sizes?.map((size, key) => {
-					console.log(userOrder.type.sizes);
 					if (userOrder.type.sizes.indexOf(size._id) >= 0) {
 						return (
 							<MenuOption

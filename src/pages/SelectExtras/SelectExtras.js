@@ -26,7 +26,6 @@ function SelectExtras() {
 
 	function handleClick(_id) {
 		setDropdownState(_id);
-		console.log(_id);
 	}
 
 	return (
