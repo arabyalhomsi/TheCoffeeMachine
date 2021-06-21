@@ -5,3 +5,20 @@
 		@include page-title;
 	}
 }
+
+.fade-ap-appear,
+.fade-ap-appear-active {
+	opacity: 0;
+	transform: translate(-100%, 0);
+}
+
+.fade-ap-appear-done {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.fade-ap-appear-done,
+.fade-ap-appear-active,
+.fade-ap-appear {
+	transition: 300ms ease-in-out;
+}

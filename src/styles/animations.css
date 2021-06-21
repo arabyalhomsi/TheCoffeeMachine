@@ -1,0 +1,25 @@
+.fade-enter {
+	opacity: 0;
+	transform: translate(200px, 0);
+}
+.fade-exit {
+	opacity: 1;
+	transform: translate(-200px, 0);
+}
+.fade-enter-active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.fade-exit-active {
+	opacity: 0;
+	transform: translate(0, 0);
+}
+.fade-enter-active {
+	transition: 300ms ease-in-out;
+}
+
+.App__transition {
+	height: calc(100vh - 40px);
+}
+
+/* .fade-exit-active */
