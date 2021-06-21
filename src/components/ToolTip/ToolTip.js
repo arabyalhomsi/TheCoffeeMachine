@@ -10,7 +10,7 @@ function ToolTip(props) {
 	return (
 		<div className={"tooltip " + props.className}>
 			{props.text}
-			<span class="tooltiptext">{props.onHover}</span>
+			<span className="tooltiptext">{props.onHover}</span>
 		</div>
 	);
 }

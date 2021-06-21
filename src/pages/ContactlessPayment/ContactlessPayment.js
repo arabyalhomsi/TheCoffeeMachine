@@ -5,7 +5,7 @@ import "./ContactlessPayment.scss";
 
 function ContactlessPayment() {
 	return (
-		<div class="ContactlessPayment">
+		<div className="ContactlessPayment">
 			<h2 className="ContactlessPayment__title">
 				Tab the machine to start
 			</h2>

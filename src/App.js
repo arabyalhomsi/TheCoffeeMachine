@@ -7,6 +7,14 @@ import AppContext from "./contexts/AppContext";
 
 function App() {
 	const [machineData, setMachineData] = useState({});
+	const [userOrder, setUserOrder] = useState({
+		type: {
+			sizes: []
+		},
+		size: {}
+	});
+
+	console.log("Machine data:", machineData);
 
 	useEffect(() => {
 		getCoffeeMachine(process.env.REACT_APP_MACHINE_ID)
@@ -16,7 +24,7 @@ function App() {
 	}, []);
 
 	return (
-		<AppContext.Provider value={{ machineData }}>
+		<AppContext.Provider value={{ machineData, userOrder, setUserOrder }}>
 			<div className="App">
 				<h1 className="App__title">Brew with lex</h1>
 				<Routes></Routes>
